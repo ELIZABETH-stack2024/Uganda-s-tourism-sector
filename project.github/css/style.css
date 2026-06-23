@@ -1,0 +1,304 @@
+
+/* google font*/
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
+
+/* CSS VARIABLES*/
+:root {
+    --primary-color: #2E8B57;
+    --secondary-color: #FFD700;
+    --light-color: #f4f4f4;
+    --dark-color: #333333;
+    --white: #ffffff;
+}
+
+
+/* GLOBAL STYLES*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
+    background-color: var(--light-color);
+}
+
+
+/*NAVIGATION BAR*/
+nav {
+    background-color: var(--primary-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 40px;
+}
+
+nav h1 {
+    color: var(--white);
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+nav ul li a {
+    color: var(--white);
+    text-decoration: none;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+nav ul li a:hover,
+.active {
+    color: var(--secondary-color);
+}
+
+
+/* HERO SECTION */
+.hero {
+    background: url('../images/hero.jpg') center/cover no-repeat;
+    height: 80vh;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+    color: var(--green);
+    padding: 20px;
+}
+
+.hero h2 {
+    font-size: 3rem;
+    margin-bottom: 15px;
+}
+
+.hero p {
+    max-width: 700px;
+    font-size: 1.2rem;
+}
+
+
+/*CTA BUTTON*/
+.cta-btn {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 12px 25px;
+
+    background-color: var(--secondary-color);
+    color: var(--dark-color);
+
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+
+    transition: 0.3s;
+}
+
+.cta-btn:hover {
+    transform: translateY(-5px);
+}
+
+
+/* INTRO SECTION*/
+.intro {
+    padding: 50px 10%;
+    text-align: center;
+}
+
+.intro h2 {
+    color: var(--primary-color);
+    margin-bottom: 20px;
+}
+
+.intro p {
+    margin-bottom: 15px;
+}
+
+.intro img {
+    width: 100%;
+    max-width: 700px;
+    margin-top: 20px;
+    border-radius: 10px;
+}
+
+
+/* FACTS SECTION*/
+.facts {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+
+    padding: 50px 10%;
+    background-color: var(--white);
+}
+
+.card {
+    flex: 1;
+    min-width: 250px;
+
+    background-color: var(--light-color);
+    padding: 20px;
+
+    border-radius: 10px;
+    text-align: center;
+
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card h3 {
+    color: var(--primary-color);
+    margin-bottom: 10px;
+}
+
+
+/* ABOUT PAGE*/
+section {
+    padding: 30px 10%;
+}
+
+section h3 {
+    color: var(--primary-color);
+    margin-bottom: 10px;
+}
+
+figure {
+    margin-top: 20px;
+}
+
+figure img {
+    width: 100%;
+    max-width: 600px;
+    border-radius: 10px;
+}
+
+figcaption {
+    margin-top: 10px;
+    font-style: italic;
+}
+
+
+/*  SOURCES BOX*/
+.sources {
+    margin-top: 20px;
+    padding: 15px;
+
+    background-color: #7de9a6;
+    border-left: 5px solid var(--primary-color);
+
+    border-radius: 5px;
+}
+
+.sources h4 {
+    margin-bottom: 10px;
+}
+
+.sources p {
+    margin-bottom: 8px;
+}
+
+
+/* GALLERY PAGE */
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+
+    gap: 20px;
+    padding: 40px;
+}
+
+.gallery div {
+    text-align: center;
+}
+
+.gallery img {
+    width: 100%;
+    height: 250px;
+
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+
+/* CONTACT PAGE */
+.contact {
+    padding: 50px 10%;
+}
+
+.contact form {
+    display: flex;
+    flex-direction: column;
+}
+
+.contact input,
+.contact textarea {
+    padding: 12px;
+    margin-bottom: 15px;
+
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.contact button {
+    background-color: var(--primary-color);
+    color: var(--white);
+
+    border: none;
+    padding: 12px;
+
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.contact button:hover {
+    background-color: #236b45;
+}
+
+
+/*FOOTER*/
+footer {
+    background-color: var(--dark-color);
+    color: var(--white);
+
+    text-align: center;
+    padding: 20px;
+}
+
+
+@media (max-width: 768px) {
+
+    nav {
+        flex-direction: column;
+    }
+
+    nav ul {
+        flex-direction: column;
+        margin-top: 10px;
+        text-align: center;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+
+    .hero h2 {
+        font-size: 2rem;
+    }
+
+    .facts {
+        flex-direction: column;
+    }
+}
